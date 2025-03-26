@@ -27,6 +27,32 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+--
+
+INSTALL
+
+Install ESP32 via boards manager (if not done before)
+  1. Open Arduino IDE
+  2. Open Tools > Board > Boards Manager
+  3. Search for "esp32"
+  4. Install "esp32" by Espressif Systems
+
+Select Board
+  1. Select Tools > Board > esp32 > Nologo ESP32C3 Super Mini
+  2. Use default settings for this board
+
+Compile and install as usual. :)
+
+
+IMPORTANT NOTE
+
+This code uses deep sleep. Once flashed, your ESP32 will go
+to deep sleep most of the time and will not be available as a serial
+device during deep sleep.
+
+You have to hold down the "boot" button and press the "RST" button 
+to go back into bootloader mode to re-flash/update the board.
+
 */
 
 #define FREQ_HZ 880  // Tone frequency of the fox. For reference: c-major-scale: 440 494 523 587 659 698 784 880 988 1047
